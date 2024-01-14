@@ -20,7 +20,7 @@
             gap: 40px;
 
             .name {
-                color: $seconday-color;
+                color: $secondary-color;
                 letter-spacing: 7px;
             }
 
@@ -42,8 +42,8 @@
                 font-size: 20px;
 
                 &:hover {
-                    border-color: $seconday-color;
-                    color: $seconday-color;
+                    border-color: $secondary-color;
+                    color: $secondary-color;
                 }
             }
         }

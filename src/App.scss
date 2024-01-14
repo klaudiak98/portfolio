@@ -25,4 +25,8 @@ section {
 a {
     text-decoration: none;
     color: inherit;
+
+    &:hover {
+        color: $secondary-color;
+    }
 }

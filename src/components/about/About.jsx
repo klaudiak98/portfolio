@@ -27,7 +27,7 @@ const About = () => {
                 initial='initial'
                 animate='animate'>
                 <motion.h1 varients={textVariants}>Hi, I'm <motion.span varients={textVariants} className='name'>Klaudia</motion.span></motion.h1>
-                <motion.h2 varients={textVariants}>I develope web application using React and NodeJS</motion.h2>
+                <motion.h2 varients={textVariants}>I develope web application using React</motion.h2>
                 <motion.div varients={textVariants}>
                     <motion.button varients={textVariants}>Contact Me</motion.button>
                 </motion.div>

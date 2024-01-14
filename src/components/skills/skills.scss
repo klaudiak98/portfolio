@@ -1,0 +1,62 @@
+@import '../../styles/_variables';
+
+.skills {
+    height: 100vh;
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    .textContainer {
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        p {
+            font-size: 20px;
+        }
+
+        hr {
+            width: 300px;
+        }
+    }
+
+    h2 {
+        font-size: 60px;
+        margin-bottom: 40px;
+        color: $secondary-color;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 35px;
+        grid-row-gap: 35px;
+
+        .skill {
+            font-size: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid lighten($primary-color, 10%);
+            border-radius: 10px;
+            padding: 20px;
+            background-color: $bg-color;
+    
+            &:hover {
+                border-color: $secondary-color;
+                color: $secondary-color;
+            }
+        }
+    }
+}
