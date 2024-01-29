@@ -1,0 +1,64 @@
+@import '../../styles/_variables';
+
+.projects {
+    @include container;
+    @include flex-column;
+    justify-content: flex-start;
+    position: relative;
+    gap: 20px;
+
+    select{
+        &:focus-visible {
+            outline: $secondary-color;
+            border-color: $secondary-color;
+            
+        }
+    }
+
+    h4 {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+    .headerContainer {
+        @include flex-row;
+        justify-content: space-between;
+        margin-top: 100px;
+
+        h2 {
+            margin-bottom: 50px;
+            margin-left: 20px;
+        }
+
+        .filterContainer {
+            @include flex-column;
+            gap: 10px;
+            width: 30vw;
+
+            select {
+                color: $bg-color;
+                padding: 5px;
+                font-size: 17px;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: lighten($primary-color, 10%);
+                }
+            }
+
+            .checkedTags {
+                @include flex-row;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                .tag {
+                    font-size: 20px;
+                    @include flex-row;
+                    flex-wrap: nowrap;
+                    gap: 5px;
+                }
+            }
+        }
+    }
+}

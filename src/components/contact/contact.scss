@@ -1,0 +1,56 @@
+@import '../../styles/_variables';
+
+.contact { 
+    @include container;
+    @include flex-row;
+
+    .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .contactItem {
+            h3 {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .formContainer {
+        flex: 1;
+
+        form {
+            @include flex-column;
+            gap: 20px;
+
+            input, textarea {
+                padding: 20px;
+                background-color: transparent;
+                @include border;
+                color: lighten($primary-color, 10%);
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                padding: 20px;
+                border: none;
+                background-color: $secondary-color;
+                border-radius: 10px;
+                cursor: pointer;
+                color: $bg-color;
+            }
+
+            .error {
+                color: $error;
+            }
+
+            .success {
+                color: $success;
+            }
+        }
+    }
+}

@@ -1,18 +1,19 @@
-import './skills.scss'
-import { motion } from 'framer-motion'
-import reactLogo from '../../assets/react.svg'
-import reduxLogo from '../../assets/redux.svg'
-import bootstrapLogo from '../../assets/bootstrap.png'
-import htmlLogo from '../../assets/html.svg'
-import cssLogo from '../../assets/css.svg'
-import jsLogo from '../../assets/javascript.svg'
-import nodejsLogo from '../../assets/nodejs.svg'
-import javaLogo from '../../assets/java.svg'
-import gitLogo from '../../assets/git.svg'
+import reactLogo from '../../assets/icons/react.svg'
+import reduxLogo from '../../assets/icons/redux.svg'
+import bootstrapLogo from '../../assets/icons/bootstrap.png'
+import htmlLogo from '../../assets/icons/html.svg'
+import cssLogo from '../../assets/icons/css.svg'
+import jsLogo from '../../assets/icons/javascript.svg'
+import nodejsLogo from '../../assets/icons/nodejs.svg'
+import javaLogo from '../../assets/icons/java.svg'
+import scssLogo from '../../assets/icons/scss.svg'
+import tsLogo from '../../assets/icons/typescript.svg'
+import mongodbLogo from '../../assets/icons/mongodb.svg'
+import postgresqlLogo from '../../assets/icons/postgresql.svg'
+import ItemsList from '../itemsList/ItemsList'
 
 const Skills = () => {
-
-    const skillsList = [
+    const skills = [
         {
             name: 'React',
             logo: reactLogo,
@@ -26,12 +27,20 @@ const Skills = () => {
             logo: bootstrapLogo,
         },
         {
-            name: 'HTML5',
-            logo: htmlLogo,
+            name: 'SCSS',
+            logo: scssLogo,
         },
         {
             name: 'CSS',
             logo: cssLogo,
+        },
+        {
+            name: 'HTML5',
+            logo: htmlLogo,
+        },
+        {
+            name: 'TypeScript',
+            logo: tsLogo,
         },
         {
             name: 'JavaScript',
@@ -46,42 +55,17 @@ const Skills = () => {
             logo: javaLogo,
         },
         {
-            name: 'Git',
-            logo: gitLogo,
+            name: 'MongoDB',
+            logo: mongodbLogo,
+        },
+        {
+            name: 'PostgreSQL',
+            logo: postgresqlLogo,
         }
     ]
 
-    const variants = {
-        initial: {
-            x: -500,
-            opacity: 0
-        },
-        animate: {
-            x: 0,
-            opacity: 1,
-            transition: {
-                duration: 1,
-                staggerChildren: 0.1
-            }
-        },
-    }
-
   return (
-    <div className='skills' >
-        <motion.div className='textContainer' variants={variants} initial='initial' whileInView='animate'>
-            <p>Check my tech stack</p>
-            <hr/>
-        </motion.div>
-        <motion.h2 variants={variants} initial='initial' whileInView='animate'>Skills</motion.h2>
-        <motion.div className='wrapper' variants={variants} initial='initial' whileInView='animate'>
-            {skillsList.map(skill => (
-                <motion.div key={skill} className='skill' variants={variants} whileHover={{ scale: 1.2 }}>
-                    <img src={skill.logo} alt=""  height='50px' width='60px'/>
-                    {skill.name}
-                </motion.div>
-            ))}
-        </motion.div>
-    </div>
+    <ItemsList title='Skills' subtitle='Check my tech stack' list={skills}/>
   )
 }
 

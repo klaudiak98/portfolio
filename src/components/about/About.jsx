@@ -3,38 +3,21 @@ import { motion } from 'framer-motion'
 
 const About = () => {
 
-    const textVariants = {
-        initial: {
-            x: -500,
-            opacity: 0
-        },
-        animate: {
-            x: 0,
-            opacity: 1,
-            transition: {
-                duration: 1,
-                staggerChildren: 0.1
-            }
-        }
-    }
-
   return (
     <div className='about'>
-        <div className='wrapper'>
+        <div className='container'>
             <motion.div 
                 className='textContainer'
-                variants={textVariants}
-                initial='initial'
-                animate='animate'>
-                <motion.h1 varients={textVariants}>Hi, I'm <motion.span varients={textVariants} className='name'>Klaudia</motion.span></motion.h1>
-                <motion.h2 varients={textVariants}>I develope web application using React</motion.h2>
-                <motion.div varients={textVariants}>
-                    <motion.button varients={textVariants}>Contact Me</motion.button>
-                </motion.div>
+                initial={{ x: -500, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1 }}
+                >
+                <h1>Hi, I'm <span className='name'>Klaudia</span></h1>
+                <h2>I develope web applications using React</h2>
+                <div>
+                    <a href='#contact' className='button' title='Contact'>Contact Me</a>
+                </div>
             </motion.div>
-            <div className='imgContainer'>
-                <img width={300} height={400} alt='img'/>
-            </div>
         </div>
     </div>
   )

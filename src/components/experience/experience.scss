@@ -1,0 +1,12 @@
+@import '../../styles/_variables';
+
+.experience {
+    @include container;
+    @include flex-column;
+    justify-content: flex-start;
+
+    h2 {
+        margin-bottom: 40px;
+        align-self: center;
+    }
+}

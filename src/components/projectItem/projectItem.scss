@@ -1,0 +1,55 @@
+@import '../../styles/_variables';
+
+.projectItem {
+    @include border;
+    @include flex-column;
+    justify-content: space-between;
+    margin: 0 10px;
+    gap: 10px;
+    height: 60vh;
+
+    .imageContainer {
+        @include flex-column;
+        height: 190px;
+
+        hr {
+                width: 100%;
+            }
+
+        img {
+            object-fit: contain;
+            margin-bottom: 8px;
+            &:hover {
+                scale: 1.05;
+            }
+        }
+    }
+
+    h3 {
+        color: $secondary-color;
+        font-size: 17px;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    .footer {
+        font-size: 13px;
+
+        .linksContainer {
+                @include flex-row;
+                margin-top: 20px;
+        }
+    }
+
+    &:hover {
+        color: $primary-color;
+
+        .imageContainer {
+            hr {
+                border-color: $secondary-color;
+            }
+        }
+    }
+}

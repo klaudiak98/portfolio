@@ -1,0 +1,22 @@
+@import '../../styles/_variables';
+
+.itemsList {
+    @include container;
+    @include flex-column;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+
+    .itemsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 35px;
+
+        .item {
+            font-size: 35px;
+            @include flex-row;
+            @include border;
+            background-color: $bg-color;
+        }
+    }
+}
