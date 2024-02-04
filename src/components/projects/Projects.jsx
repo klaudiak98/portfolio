@@ -175,7 +175,7 @@ const Projects = () => {
         <motion.div variants={variants} initial='initial' whileInView='animate' className='headerContainer'>
           <h2>My Projects</h2>
           <div className='filterContainer'>
-            <select onChange={handleTagsChange} value={select} disabled={checkedTags.length >= 6}>
+            <select onChange={handleTagsChange} value={select} disabled={checkedTags.length >= 6} aria-label='Technology'>
               <option value='' disabled>choose technology (max 6)</option>
                 {tags.filter(tag => !checkedTags.includes(tag)).map(tag => (
                   <option key={tag} value={tag}>{tag}</option>

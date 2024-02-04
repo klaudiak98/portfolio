@@ -23,15 +23,15 @@ const ProjectItem = ({ project }) => {
         <div className='linksContainer'>
           {
             typeof(project.github) === 'string'
-            ? <a href={project.github} title='Code' target='_blanck'><img src={githubLogo} width='40px' height='40px'/></a>
+            ? <a href={project.github} title='Code' target='_blanck'><img src={githubLogo} width='40px' height='40px' alt='GitHub logo'/></a>
             : <>
-            {project.github.react && <a href={project.github.react} title='React code' target='_blanck'><img src={githubLogo} width='40px' height='40px'/></a>}
-            {project.github.vue && <a href={project.github.vue} title='Vue.js code' target='_blanck'><img src={githubLogo} width='40px' height='40px'/></a>}
-            {project.github.angular && <a href={project.github.angular} title='Angular code' target='_blanck'><img src={githubLogo} width='40px' height='40px'/></a>}
-            {project.github.nodejs && <a href={project.github.nodejs} title='NodeJS code' target='_blanck'><img src={githubLogo} width='40px' height='40px'/></a>}
+            {project.github.react && <a href={project.github.react} title='React code' target='_blanck'><img src={githubLogo} width='40px' height='40px' alt='React logo'/></a>}
+            {project.github.vue && <a href={project.github.vue} title='Vue.js code' target='_blanck'><img src={githubLogo} width='40px' height='40px' alt='Vue.js logo'/></a>}
+            {project.github.angular && <a href={project.github.angular} title='Angular code' target='_blanck'><img src={githubLogo} width='40px' height='40px' alt='Angular logo'/></a>}
+            {project.github.nodejs && <a href={project.github.nodejs} title='NodeJS code' target='_blanck'><img src={githubLogo} width='40px' height='40px' alt='NodeJS logo'/></a>}
             </>
           }
-          {project.demo && <a href={project.demo} title='Demo' target='_blanck'><img src={webappLogo} width='40px' height='40px'/></a>}
+          {project.demo && <a href={project.demo} title='Demo' target='_blanck'><img src={webappLogo} width='40px' height='40px' alt='Demo'/></a>}
         </div>
       </div>
     </motion.div>
