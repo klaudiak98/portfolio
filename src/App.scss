@@ -52,11 +52,6 @@ html {
                 }
             }
 
-            #experience {
-                height: auto;
-                scroll-snap-align: start;
-            }
-
             h1 {
                 font-size: 70px;
 
@@ -141,6 +136,11 @@ html {
                     }
                 }
             }
+        }
+
+        #experience {
+            height: auto;
+            scroll-snap-align: start;
         }
 
         a {
