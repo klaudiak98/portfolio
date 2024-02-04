@@ -1,4 +1,4 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
 .projectItem {
     @include border;
@@ -8,17 +8,32 @@
     gap: 10px;
     height: 60vh;
 
+    .container {
+        overflow-y: scroll;
+
+        // Edge
+        -ms-overflow-style: none;
+        // Firefox
+        scrollbar-width: none;
+        
+        // Chrome, Safari, Opera
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
     .imageContainer {
         @include flex-column;
         height: 190px;
 
         hr {
-                width: 100%;
-            }
+            width: 100%;
+        }
 
         img {
             object-fit: contain;
             margin-bottom: 8px;
+
             &:hover {
                 scale: 1.05;
             }
@@ -38,8 +53,8 @@
         font-size: 13px;
 
         .linksContainer {
-                @include flex-row;
-                margin-top: 20px;
+            @include flex-row;
+            margin-top: 20px;
         }
     }
 
@@ -49,6 +64,146 @@
         .imageContainer {
             hr {
                 border-color: $secondary-color;
+            }
+        }
+    }
+
+    @include sm {
+        height: 50vh;
+        margin: 0 40px;
+        padding: 20px;
+
+        .container {
+            overflow: scroll;
+
+            .imageContainer {
+                img {
+                    height: 120px;
+                }
+
+                height: 140px;
+            }
+
+            span {
+                font-size: 13px;
+            }
+        }
+
+        .footer {
+            font-size: 11px;
+
+            .linksContainer {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @include md {
+        .container {
+            overflow: scroll;
+
+            .imageContainer {
+                img {
+                    height: 180px;
+                }
+                height: 200px;
+            }
+        }
+
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                column-gap: 20px;
+                grid-template-areas:
+                    "img  title title"
+                    "img  description description"
+                    "img  description description";
+
+                .imageContainer {
+                    grid-area: img;
+                    height: auto;
+
+                    hr {
+                        display: none;
+                    }
+                }
+
+                a {
+                    grid-area: title;
+                }
+
+                span {
+                    grid-area: description;
+                }
+            }
+
+            .footer {
+                i {
+                    display: none;
+                }
+
+                align-self: center;
+
+                .linksContainer {
+                    a {
+                        img {
+                            height: 35px;
+                            width: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include lg {
+        .container {
+            overflow: scroll;
+        }
+
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            padding: 10px;
+
+            a {
+                h3 {
+                    font-size: 13px;
+                }
+            }
+
+            span {
+                font-size: 11px;
+            }
+
+            .container {
+                .imageContainer {
+                    height: 100px;
+
+                    a {
+                        img {
+                            height: 80px;
+                        }
+                    }
+                }
+            }
+            .footer {
+                font-size: 11px;
+
+                i {
+                    display: none;
+                }
+
+                .linksContainer {
+                    margin-top: 5px;
+
+                    a {
+                        img{
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
             }
         }
     }

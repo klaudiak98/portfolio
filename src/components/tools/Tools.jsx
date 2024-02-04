@@ -29,7 +29,7 @@ const Tools = () => {
             logo: vsCodeLogo
         },
         {
-            name: 'Intellij',
+            name: 'IntelliJ',
             logo: intellijLogo
         },
     ]

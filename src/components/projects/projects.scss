@@ -1,4 +1,4 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
 .projects {
     @include container;
@@ -7,17 +7,17 @@
     position: relative;
     gap: 20px;
 
-    select{
+    select {
         &:focus-visible {
             outline: $secondary-color;
             border-color: $secondary-color;
-            
+
         }
     }
 
     h4 {
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
         margin-top: 60px;
     }
 
@@ -25,6 +25,7 @@
         @include flex-row;
         justify-content: space-between;
         margin-top: 100px;
+        padding: 0 20px;
 
         h2 {
             margin-bottom: 50px;
@@ -57,6 +58,92 @@
                     @include flex-row;
                     flex-wrap: nowrap;
                     gap: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sm {
+        gap: 10px;
+
+        h4 {
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        .headerContainer {
+            @include flex-column;
+            margin-top: 70px;
+
+            h2 {
+                margin: 10px;
+            }
+
+            .filterContainer {
+                width: 80%;
+
+                select {
+                    font-size: 13px;
+                }
+
+                .checkedTags {
+                    .tag {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include md {
+        .headerContainer{
+            margin-top: 50px;
+            gap: 10px;
+
+            .filterContainer{
+                width: unset;
+                margin-right: 0;
+
+                .checkedTags { 
+                    .tag {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 30px;
+            }
+
+            .filterContainer {
+                select {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    @include lg {
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            .headerContainer {
+                margin-top: 50px;
+                gap: 10px;
+
+                h2 {
+                    margin-bottom: 20px;
+                }
+
+                .filterContainer {
+                    width: 40vw;
+
+                    select {
+                        font-size: 15px;
+                    }
                 }
             }
         }

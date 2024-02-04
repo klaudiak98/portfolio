@@ -110,7 +110,7 @@ const Experience = () => {
             link: 'https://github.com/klaudiak98/nextjs-img-gallery'
         },
         {
-            date: '2024 January',
+            date: '2024 February',
             title: 'Creation of this portfolio',
             description: '',
             img: IoCodeSlash,
@@ -122,7 +122,7 @@ const Experience = () => {
   return (
     <div className='experience'>
         <h2>Experience</h2>
-        <Timeline items={experience}/>
+        <Timeline items={experience.reverse()}/>
     </div>
   )
 }

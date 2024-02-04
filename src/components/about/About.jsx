@@ -8,7 +8,7 @@ const About = () => {
         <div className='container'>
             <motion.div 
                 className='textContainer'
-                initial={{ x: -500, opacity: 0 }}
+                initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1 }}
                 >

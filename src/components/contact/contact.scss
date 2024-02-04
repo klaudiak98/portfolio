@@ -1,8 +1,9 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
-.contact { 
+.contact {
     @include container;
     @include flex-row;
+    padding: 0 20px;
 
     .textContainer {
         flex: 1;
@@ -24,7 +25,8 @@
             @include flex-column;
             gap: 20px;
 
-            input, textarea {
+            input,
+            textarea {
                 padding: 20px;
                 background-color: transparent;
                 @include border;
@@ -50,6 +52,115 @@
 
             .success {
                 color: $success;
+            }
+        }
+    }
+
+    @include sm {
+        @include flex-column;
+        align-items: normal;
+        gap: 20px;
+        padding: 0 $padding-y-sm;
+
+        .textContainer {
+            gap: 10px;
+            flex: none;
+
+            h3 {
+                font-size: 16px;
+            }
+
+            a {
+                font-size: 13px;
+            }
+        }
+
+        .formContainer {
+            flex: none;
+
+            form {
+                gap: 10px;
+
+                button {
+                    font-size: 18px;
+                    padding: 10px;
+                    align-self: flex-start;
+                    width: 50%;
+                }
+
+            }
+        }
+    }
+
+    @include md {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 13px;
+
+        .textContainer {
+            flex: unset;
+            width: 70%;
+            align-self: center;
+            gap: 15px;
+
+            h2 {
+                align-self: center;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .formContainer {
+            flex: unset;
+            width: 70%;
+            align-self: center;
+
+            form {
+                gap: 10px;
+
+                input {
+                    padding: 10px;
+                }
+
+                button {
+                    padding: 15px;
+                }
+            }
+        }
+
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            flex-direction: row;
+        
+            .formContainer {
+                form {
+                    button {
+                        align-self: flex-start;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include lg {
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            .formContainer {
+
+                form {
+                    gap: 10px;
+
+                    input {
+                        padding: 10px;
+                    }
+
+                    button {
+                        padding: 15px;
+                        align-self: flex-start;
+                        width: 50%;
+                    }
+                }
             }
         }
     }

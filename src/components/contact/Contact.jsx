@@ -34,7 +34,7 @@ const Contact = () => {
     const variants = {
         initial: {
             opacity: 0,
-            x: -500
+            x: -100
         },
         animate: {
             opacity: 1,
@@ -67,7 +67,7 @@ const Contact = () => {
             <form ref={formRef} onSubmit={sendEmail}>
                 <input type='text' required placeholder='Name' name='from_name' value={name} onChange={(e) => setName(e.target.value)}/>
                 <input type='email' required placeholder='Email' name='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <textarea rows={10} required placeholder='Your message' name='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
+                <textarea rows={7} required placeholder='Your message' name='message' value={message} onChange={(e) => setMessage(e.target.value)}/>
                 <button>Send</button>
                 <div style={{alignSelf: 'center'}}>
                     <ClipLoader

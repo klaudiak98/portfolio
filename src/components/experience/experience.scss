@@ -1,12 +1,18 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
 .experience {
     @include container;
     @include flex-column;
     justify-content: flex-start;
+    padding: 0 20px;
 
     h2 {
         margin-bottom: 40px;
         align-self: center;
     }
+
+    @include sm {
+        padding: 0 $padding-y-sm;
+    }
+
 }

@@ -1,4 +1,4 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
 .timeline {
     @include flex-column;
@@ -12,5 +12,11 @@
         left: calc(50% - 1px);
         width: 2px;
         height: 100%;
+    }
+
+    @include sm {
+        &::after {
+            left: 10px;
+        }
     }
 }

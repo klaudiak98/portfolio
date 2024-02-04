@@ -1,0 +1,61 @@
+@import './variables';
+@import './breakpoints';
+
+@mixin sm {
+    @media (max-width: #{$screen-sm-max}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$screen-sm-max+1px}) and (max-width: #{$screen-md-max}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$screen-md-max+1px}) and  (max-width: #{$screen-lg-max}){
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{$screen-lg-max+1px}) {
+        @content;
+    }
+}
+
+@mixin container {
+    height: 100%;
+    margin: auto;
+    max-width: $container-max-width;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@mixin border {
+    border: 1px solid lighten($primary-color, 10%);
+    border-radius: 10px;
+    padding: 20px;
+
+    &:hover {
+        border-color: $secondary-color;
+        color: $secondary-color;
+    }
+
+    @include sm {
+        padding: 10px;
+    }
+}

@@ -7,8 +7,8 @@ const ProjectItem = ({ project }) => {
 
   return (
     <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className='projectItem'>
-      <div>
-        {project.image && 
+      <div className='container'>
+        {project.image &&
         <div className='imageContainer'>
             <a href={project.demo || project.github?.react || project.github} title='Check the project' target='_blanck'>
                 <img src={project.image} alt={project.name} height='170px' width='100%'/>

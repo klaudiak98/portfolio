@@ -36,7 +36,7 @@ const App = () => {
           <IoArrowUpCircle className='scrollUp'/>
         </a>
       )}
-      <section>
+      <section id='about'>
         <Navbar/>
         <About/>
       </section>

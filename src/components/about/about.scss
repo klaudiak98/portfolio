@@ -1,9 +1,10 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
 .about {
     height: calc(100vh - $navbar-height);
     background: linear-gradient(180deg, $bg-color, lighten($bg-color, 10%));
     overflow: hidden;
+    padding: 0 20px;
 
     .container {
         @include container;
@@ -20,7 +21,6 @@
             }
 
             h2 {
-                font-size: 50px;
                 color: $primary-color;
             }
 
@@ -30,6 +30,112 @@
                 color: lighten($primary-color, 10%);
                 cursor: pointer;
                 font-size: 20px;
+            }
+        }
+    }
+
+    @include sm {
+        height: calc(100vh - 100px);
+        padding: 0 $padding-y-sm;
+
+        .container {
+            .textContainer {
+                width: 100%;
+                gap: 30px;
+            }
+        }
+    }
+
+    @include md {
+        .container {
+            .textContainer {
+                width: 100%;
+                padding: 15px;
+
+                .button {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            padding: 20px 0;
+            background: unset;
+
+            .container {
+                .textContainer { 
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-areas:
+                    "h1 h1"
+                    "h2 button";
+                    align-items: center;
+                    justify-content: center;
+
+                    gap: 15px;
+
+                    h1 {
+                        grid-area: h1;
+                        justify-self: center;
+                    }
+
+                    h2 {
+                        grid-area: h2;
+                        font-size: 30px;
+                    }
+
+                    div {
+                        grid-area: button;
+                        justify-self: center;
+
+                        .button {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include lg {
+        @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+            padding: 20px 0;
+            background: unset;
+
+            .container {
+                .textContainer { 
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    grid-template-areas:
+                    "h1 h1"
+                    "h2 button";
+                    align-items: center;
+                    justify-content: center;
+
+                    gap: 15px;
+
+                    h1 {
+                        grid-area: h1;
+                        justify-self: center;
+                    }
+
+                    h2 {
+                        grid-area: h2;
+                        font-size: 30px;
+                    }
+
+                    div {
+                        grid-area: button;
+                        justify-self: center;
+
+                        .button {
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
         }
     }

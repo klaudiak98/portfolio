@@ -1,4 +1,4 @@
-@import './styles/_variables';
+@import './styles';
 
 * {
     padding: 0;
@@ -23,7 +23,7 @@ html {
         section {
             height: 100vh;
             scroll-snap-align: center;
-
+            
             .subtitleContainer {
                 position: absolute;
                 top: 50px;
@@ -31,12 +31,116 @@ html {
                 display: flex;
                 gap: 20px;
                 align-items: center;
-            }
-        }
 
-        #experience {
-            // poprawić
-            height: 330vh;
+                @include sm {
+                    gap: 5px;
+                }
+
+                @include md {
+                    gap: 10px;
+                    top: 20px;
+
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        top: 30px;
+                    }
+                }
+
+                @include lg {
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        top: 20px;
+                    }
+                }
+            }
+
+            #experience {
+                height: auto;
+                scroll-snap-align: start;
+            }
+
+            h1 {
+                font-size: 70px;
+
+                @include sm {
+                    font-size: 40px;
+                }
+
+                @include md {
+                    font-size: 50px;
+
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        font-size: 45px;
+                    }
+                }
+
+                @include lg {
+                    font-size: 60px;
+
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        font-size: 50px;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 55px;
+                color: $secondary-color;
+
+                @include sm {
+                    font-size: 30px;
+                }
+
+                @include md {
+                    font-size: 40px;
+
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        font-size: 35px;
+                    }
+                }
+
+                @include lg {
+                    font-size: 50px;
+
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            p {
+                font-size: 20px;
+
+                @include sm {
+                    font-size: 17px;
+                }
+
+                @include md {
+                    font-size: 18px;
+                }
+
+                @include lg {
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            hr {
+                width: 300px;
+
+                @include sm {
+                    width: 70px;
+                }
+
+                @include md {
+                    width: 150px;
+                }
+
+                @include lg {
+                    @media only screen and (hover: none) and (pointer: coarse) and (orientation: landscape) {
+                        width: 150px;
+                    }
+                }
+            }
         }
 
         a {
@@ -46,23 +150,6 @@ html {
             &:hover {
                 color: $secondary-color;
             }
-        }
-
-        h1 {
-            font-size: 80px;
-        }
-
-        h2 {
-            font-size: 60px;
-            color: $secondary-color;
-        }
-
-        p {
-            font-size: 20px;
-        }
-
-        hr {
-            width: 300px;
         }
 
         .scrollUp {
@@ -81,5 +168,5 @@ html {
                 color: $primary-color;
             }
         }
-    }   
+    }
 }

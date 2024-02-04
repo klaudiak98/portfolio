@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import '../../styles';
 
 .navbar {
     height: $navbar-height;
@@ -7,13 +7,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+
+    @include sm {
+        padding: 0 $padding-y-sm;
+    }
+
+    @include md {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     span {
         font-weight: bold;
+
+        @include sm {
+            display: none;
+        }
     }
 
     .links {
         display: flex;
         gap: 20px;
+
+        @include sm {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @include md {
+            flex-wrap: wrap;
+        }
     }
 }

@@ -5,7 +5,7 @@ const ItemsList = ({ title, subtitle, list }) => {
 
     const variants = {
         initial: {
-            x: -500,
+            x: -100,
             opacity: 0
         },
         animate: {

@@ -1,4 +1,4 @@
-@import '../../styles/_variables';
+@import '../../styles';
 
 .timelineItem {
     display: flex;
@@ -20,11 +20,11 @@
             color: $primary-color;
         }
 
-       .itemHeaderContainer {
+        .itemHeaderContainer {
             @include flex-row;
             justify-content: space-between;
             width: 100%;
-            
+
             svg {
                 font-size: 25px;
             }
@@ -50,23 +50,95 @@
         }
     }
 
-    &:nth-child(odd){
+    &:nth-child(even) {
         align-self: flex-end;
         justify-content: flex-start;
         padding-left: 30px;
         padding-right: 0;
         text-align: left;
 
-        .timelineItemContainer{
+        .timelineItemContainer {
             align-items: flex-start;
 
-            .itemHeaderContainer{
+            .itemHeaderContainer {
                 flex-direction: row-reverse;
             }
 
             .circle {
                 left: -41px;
             }
+        }
+    }
+
+    @include sm {
+        padding-right: 20px;
+        margin: 7px 0;
+        width: 100%;
+
+        .timelineItemContainer {
+
+            .itemHeaderContainer {
+                font-size: 12px;
+
+                svg {
+                    font-size: 14px;
+                }
+            }
+
+            h3 {
+                font-size: 15px;
+            }
+
+            span {
+                font-size: 13px;
+            }
+
+            i {
+                font-size: 11px;
+            }
+
+            .circle {
+                width: 16px;
+                height: 16px;
+                left: -28px;
+                right: 0;
+            }
+        }
+
+        &:nth-child(odd) {
+            padding-left: 30px;
+            padding-right: 0;
+            text-align: left;
+
+            .timelineItemContainer {
+                align-items: flex-start;
+
+                .itemHeaderContainer {
+                    flex-direction: row-reverse;
+                }
+
+                .circle {
+                    left: -28px;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+
+            .timelineItemContainer {
+                .circle {
+                    left: -28px;
+                }
+            }
+
+        }
+    }
+
+    @include md {
+        .timelineItemContainer {
+            padding: 10px;
+
+            font-size: 14px;
         }
     }
 }
