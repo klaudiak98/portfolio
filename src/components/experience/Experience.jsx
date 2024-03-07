@@ -110,6 +110,13 @@ const Experience = () => {
             link: 'https://github.com/klaudiak98/nextjs-img-gallery'
         },
         {
+            date: '2023 September',
+            title: 'Completed course: Java programming - Basic Level',
+            description: 'Comarch',
+            img: IoRibbon,
+            link: 'https://www.linkedin.com/in/klaudia-kieryk'
+        },
+        {
             date: '2024 February',
             title: 'Creation of this portfolio',
             description: '',
