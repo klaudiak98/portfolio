@@ -16,9 +16,18 @@ import taskTrackerImg from '../../assets/projects/tasktracker.png'
 import awwwsomeImg from '../../assets/projects/awwwesome.png'
 import socialNetworkingImg from '../../assets/projects/socialnetworking.png'
 import componentsListImg from '../../assets/projects/componentslist.png'
+import productsListImg from '../../assets/projects/productslist.png'
 
 const Projects = () => {
   const projects = [
+    {
+      name: 'Products List',
+      description: 'SPA application displayed the pagineted list of products.',
+      tags: ['React', 'TypeScript', 'MUI', 'Vite', 'Context API', 'React Router' ],
+      github: 'https://github.com/klaudiak98/products-list-app',
+      demo: 'https://products-list-app-kk.vercel.app/',
+      image: productsListImg
+    },
     {
       name: 'Portfolio',
       description: 'You are here :)',
@@ -57,7 +66,7 @@ const Projects = () => {
     {
       name: 'Components Library',
       description: 'The application contains implementations of different components that can be used in another project.',
-      tags: ['React', 'Tailwind', 'React Context', 'React Reducer', 'React Hooks'],
+      tags: ['React', 'Tailwind', 'Context API', 'React Reducer', 'React Hooks'],
       github: 'https://github.com/klaudiak98/components-list',
       image: componentsListImg
     },
